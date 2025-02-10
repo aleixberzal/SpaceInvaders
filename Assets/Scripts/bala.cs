@@ -9,11 +9,14 @@ public class bala : MonoBehaviour
     public Rigidbody2D rb;
     public float speed = 10f;
     public string tagCollision = "Destruible";
+    public int cont = 5;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.up * speed;
+
+
     }
  
     // Update is called once per frame

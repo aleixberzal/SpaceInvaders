@@ -21,7 +21,8 @@ public class firing : MonoBehaviour
     }
     void Shoot()
     {
-        Instantiate(balaPrefab, firePoint.position, transform.rotation);
+        GameObject bullet= Instantiate(balaPrefab, firePoint.position, transform.rotation);
         Debug.Log("POW");
+        Destroy(bullet, 1);
     }
 }
