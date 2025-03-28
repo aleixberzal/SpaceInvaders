@@ -4,25 +4,45 @@ using UnityEngine;
 
 public class spawnee : MonoBehaviour
 {
-    public GameObject red_prefab;
-    public GameObject yellow_prefab;
-    public GameObject green_prefab;
+    /*1. For iteration to spawn a 3 rows of 7 columns of invaders. 
+      2. Depending on the row the invader is, it will be one sprite or another. 
+      */
+    private Vector2 spawnLocator;
+    public int xpos,ypos;
+    public GameObject redInvader, blueInvader, yellowInvader;
+    private short rows = 7;
+    private short columns = 3;
+    public float xDistance;
+    public float yDistance;
 
-    public Vector3 red_position = new Vector3(-7f, 3f, 0f);
-    public Vector3 yellow_position = new Vector3(-7f, 1f, 0f);
-    public Vector3 green_position = new Vector3(-7f, 0f, 0f);
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        spawn();
+        Spawn(); 
     }
 
-    void spawn()
+    private void Spawn()
     {
-         Instantiate(red_prefab, red_position, transform.rotation);
-         Instantiate(yellow_prefab, yellow_position, transform.rotation);
-         Instantiate(green_prefab, green_position, transform.rotation);
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                Vector3 newPosition = new Vector3(xpos+i * xDistance, ypos+j*yDistance, 0.0f);
+                if (j == 1)
+                {
+                    Instantiate(redInvader, newPosition, Quaternion.identity);
+
+                }else if(j == 2)
+                {
+                    Instantiate(blueInvader, newPosition, Quaternion.identity);
+
+                }
+                else
+                {
+                    Instantiate(yellowInvader, newPosition, Quaternion.identity);
+
+                }
+            }
+        }
     }
 }
