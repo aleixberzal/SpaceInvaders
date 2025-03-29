@@ -152,12 +152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e08a8db9805199142a01147de1da2a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xpos: -8
-  ypos: -3
+  xpos: -6
+  ypos: 0
   redInvader: {fileID: 387720805481390168, guid: 2d1542077fb9dd64d9518c8a03fdb92f, type: 3}
   blueInvader: {fileID: 3705006597933889872, guid: 13d3c89dd26d168499684ea4f935b897, type: 3}
   yellowInvader: {fileID: 466603206186024885, guid: 562ccee02f11b0f4a9e5a32cd92b760a, type: 3}
-  distance: 3
+  alienNum: 7
+  xDistance: 2
+  yDistance: 2
 --- !u!4 &361038525
 Transform:
   m_ObjectHideFlags: 0
@@ -317,9 +319,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1676842500917249210, guid: ac45342f5723f93488946ddd6a9ec161, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710097000214892966, guid: ac45342f5723f93488946ddd6a9ec161, type: 3}
+      propertyPath: coolDown
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5192515060005987815, guid: ac45342f5723f93488946ddd6a9ec161, type: 3}
       propertyPath: m_Name
       value: personaje_principal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519387204251772293, guid: ac45342f5723f93488946ddd6a9ec161, type: 3}
+      propertyPath: speed
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

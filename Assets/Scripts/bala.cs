@@ -6,15 +6,15 @@ using UnityEngine;
 public class bala : MonoBehaviour
 {
 
-    public Rigidbody2D rb;
+    public Rigidbody2D rb2D;
     public float speed = 10f;
     public string tagCollision = "Destruible";
     public int cont = 5;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.up * speed;
+        rb2D = GetComponent<Rigidbody2D>();
+        rb2D.velocity = transform.up * speed;
 
 
     }
@@ -31,6 +31,8 @@ public class bala : MonoBehaviour
     {
         if (collision.tag == tagCollision)
         {
+            //We destroy the bullet once it touches anything with the assigned tag
+            Debug.Log("Objeto tocado");
             Destroy(gameObject);
         }
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawnee : MonoBehaviour
+public class invaders : MonoBehaviour
 {
     /*1. For iteration to spawn a 3 rows of 7 columns of invaders. 
       2. Depending on the row the invader is, it will be one sprite or another. 
@@ -10,8 +10,8 @@ public class spawnee : MonoBehaviour
     private Vector2 spawnLocator;
     public int xpos,ypos;
     public GameObject redInvader, blueInvader, yellowInvader;
-    private short rows = 7;
-    private short columns = 3;
+    public short alienNum = 7;
+    private short rows = 3;
     public float xDistance;
     public float yDistance;
 
@@ -23,11 +23,11 @@ public class spawnee : MonoBehaviour
     private void Spawn()
     {
 
-        for (int i = 0; i < rows; i++)
+        for (int i = 0; i < alienNum; i++)
         {
-            for (int j = 0; j < columns; j++)
+            for (int j = 0; j < rows; j++)
             {
-                Vector3 newPosition = new Vector3(xpos+i * xDistance, ypos+j*yDistance, 0.0f);
+                Vector2 newPosition = new Vector2(xpos+i * xDistance, ypos+j*yDistance);
                 if (j == 1)
                 {
                     Instantiate(redInvader, newPosition, Quaternion.identity);
@@ -45,4 +45,9 @@ public class spawnee : MonoBehaviour
             }
         }
     }
+
+    //To make the invaders fire we instantiate a firepoint randomly in a position every x (rnd) seconds and make them fire a bullet downsides 
+
+
+
 }
