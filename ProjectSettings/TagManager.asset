@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Destruible
   - Bala
+  - EnemyLaser
   layers:
   - Default
   - TransparentFX

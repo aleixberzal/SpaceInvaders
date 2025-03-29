@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-
     private Rigidbody2D rb2D;
 
     private float movimiento = 0f;
@@ -23,4 +22,5 @@ public class movement : MonoBehaviour
 
         transform.position += direction * speed * Time.deltaTime;
     }
+  
 }

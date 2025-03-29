@@ -1,39 +1,44 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class bala : MonoBehaviour
 {
-
     public Rigidbody2D rb2D;
     public float speed = 10f;
-    public string tagCollision = "Destruible";
-    public int cont = 5;
-    // Start is called before the first frame update
+    public string tagCollision;
+    public bool isEnemyBullet; 
+  
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
-        rb2D.velocity = transform.up * speed;
 
-
-    }
- 
-    // Update is called once per frame
-    
-        
-
-     
-
-    
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == tagCollision)
+        if (isEnemyBullet)
         {
-            //We destroy the bullet once it touches anything with the assigned tag
-            Debug.Log("Objeto tocado");
-            Destroy(gameObject);
+            rb2D.velocity = -transform.up * speed;
+        }
+        else
+        {
+            rb2D.velocity = transform.up * speed; 
         }
     }
+
+  private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (isEnemyBullet)
+    {
+            if (collision.tag == "Player")
+            {
+                Destroy(collision.gameObject);
+                Destroy(gameObject);
+            }
+        }
+    else
+    {
+            if (collision.tag == "Destruible")
+
+            {
+                Destroy(gameObject);
+            }
+    }
+}
 }

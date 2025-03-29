@@ -154,12 +154,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xpos: -6
   ypos: 0
-  redInvader: {fileID: 387720805481390168, guid: 2d1542077fb9dd64d9518c8a03fdb92f, type: 3}
-  blueInvader: {fileID: 3705006597933889872, guid: 13d3c89dd26d168499684ea4f935b897, type: 3}
-  yellowInvader: {fileID: 466603206186024885, guid: 562ccee02f11b0f4a9e5a32cd92b760a, type: 3}
+  redInvader: {fileID: 9035610355530707533, guid: 83bc7fe74583eea4e8b1bbcb016b1538, type: 3}
+  blueInvader: {fileID: 8039047176088405904, guid: 69e61077c0289fd49a17613f7a4a5143, type: 3}
+  yellowInvader: {fileID: 4105782874303623192, guid: c98b71f03c82a1d439b19788669ace34, type: 3}
   alienNum: 7
   xDistance: 2
   yDistance: 2
+  baseSpeed: 1
+  maxSpeed: 3
+  stepDownDistance: 0.5
+  leftBoundary: -8.49
+  rightBoundary: 0
+  invaderLaserPrefab: {fileID: 7936965925863049944, guid: 4c356418d185dc04dae56cf691e8ecc9, type: 3}
+  minFireDelay: 0.3
+  maxFireDelay: 2
 --- !u!4 &361038525
 Transform:
   m_ObjectHideFlags: 0
@@ -175,6 +183,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1571605345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5192515060005987815, guid: ac45342f5723f93488946ddd6a9ec161, type: 3}
+  m_PrefabInstance: {fileID: 5485554458073841578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1571605351
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571605345}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.017958608}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6, y: 0.3}
+    newSize: {x: 0.6, y: 0.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.2640828}
+  m_EdgeRadius: 0
 --- !u!1 &2048266135
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: personaje_principal
       objectReference: {fileID: 0}
+    - target: {fileID: 5192515060005987815, guid: ac45342f5723f93488946ddd6a9ec161, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7519387204251772293, guid: ac45342f5723f93488946ddd6a9ec161, type: 3}
       propertyPath: speed
       value: 7
@@ -338,5 +400,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5192515060005987815, guid: ac45342f5723f93488946ddd6a9ec161, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1571605351}
   m_SourcePrefab: {fileID: 100100000, guid: ac45342f5723f93488946ddd6a9ec161, type: 3}
