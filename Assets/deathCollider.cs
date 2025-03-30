@@ -3,7 +3,7 @@ using UnityEngine;
 public class deathCollider : MonoBehaviour
 
 {
-
+    //NON FUNCTIONAL
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == ("Bala")) 

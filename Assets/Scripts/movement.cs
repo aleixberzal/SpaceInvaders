@@ -7,7 +7,6 @@ public class movement : MonoBehaviour
 {
     private Rigidbody2D rb2D;
 
-    private float movimiento = 0f;
 
     public float speed;
 
@@ -17,7 +16,7 @@ public class movement : MonoBehaviour
     {
         float horizontal;
         horizontal = Input.GetAxis("Horizontal");
-
+        //Simple vector to move the player only horizontally and we make a Vector3 to be able to use this operand  +=
         Vector3 direction = new Vector2(horizontal, 0f);
 
         transform.position += direction * speed * Time.deltaTime;

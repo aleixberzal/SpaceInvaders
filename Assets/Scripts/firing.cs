@@ -13,10 +13,10 @@ public class firing : MonoBehaviour
     
    
 
-    // Update is called once per frame
+
     void Update()
     {
-     if(Input.GetKeyDown(KeyCode.Z) && Time.time > lastFiredBullet + coolDown)
+     if(Input.GetKeyDown(KeyCode.Space) && Time.time > lastFiredBullet + coolDown)
         {
             //Cooldown application
 
@@ -27,8 +27,9 @@ public class firing : MonoBehaviour
     }
     void Shoot()
     {
+        //We instantiate the bullet from the firepoint
         GameObject bullet= Instantiate(balaPrefab, firePoint.position, transform.rotation);
         Debug.Log("POW");
-        Destroy(bullet, 3);
+        Destroy(bullet, 5);
     }
 }

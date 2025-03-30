@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7519387204251772293}
   - component: {fileID: 1676842500917249210}
   - component: {fileID: 4710097000214892966}
-  - component: {fileID: 3621460873991049284}
+  - component: {fileID: -2293249548919903652}
   m_Layer: 0
   m_Name: personaje_principal
   m_TagString: Player
@@ -176,7 +176,7 @@ MonoBehaviour:
   balaPrefab: {fileID: 7936965925863049944, guid: 2c3766748e345f0448e2696c7618ad86, type: 3}
   firePoint: {fileID: 2138106349300387880}
   fireRate: 0.5
---- !u!114 &3621460873991049284
+--- !u!114 &-2293249548919903652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,6 +185,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5192515060005987815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d29886c1e0af0c44388c3b1f6c4d8b59, type: 3}
+  m_Script: {fileID: 11500000, guid: 64e9cf1446b8ccc4caf614e347219b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLifes: 3
